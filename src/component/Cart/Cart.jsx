@@ -1,9 +1,9 @@
 import React from 'react';
 import CartBox from './CartBox';
 
-const Cart = ({info,h}) => {
+const Cart = ({info,setI,h}) => {
     return (
-        <div className='mb-10 max-w-[70%] mx-auto'>
+        <div className='max-w-[70%] mx-auto'>
             <div>
                 <h2 className='text-4xl font-bold pb-10'>Your Cart</h2>
             </div>
@@ -12,6 +12,20 @@ const Cart = ({info,h}) => {
                     info.map(v => <CartBox key={v.id} p={v} h={h}></CartBox>)
                 }
             </div>
+
+            {
+                info.length !== 0 && (
+                    <div>
+                        <div className='flex justify-between items-center p-8 bg-black rounded-3xl my-10'>
+                            <h2 className='text-3xl font-bold text-white'>Total</h2>
+                            <h2 className='text-red-400 text-3xl font-bold'>$30</h2>
+                        </div>
+                        <div onClick={() => setI([])} className='bg-red-600 rounded-2xl shadow-lg shadow-red-500/50 btn w-full py-9'>
+                            <h2 className='text-2xl font-bold text-white text-center'>Proceed to Checkout</h2>
+                        </div>
+                    </div>
+                )
+            }
 
             {
                 info.length === 0 && <h2 className='text-3xl font-semibold text-gray-400 text-center my-10'>Your cart is empty</h2>

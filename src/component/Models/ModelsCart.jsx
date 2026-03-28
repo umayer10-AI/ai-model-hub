@@ -10,9 +10,9 @@ const ModelsCart = ({p,setI}) => {
     }
     
     return (
-        <div className='rounded-2xl overflow-hidden shadow-xl h-full'>
+        <div className='rounded-2xl overflow-hidden shadow-xl h-full group'>
             <div className='bg-gray-200 p-7 flex justify-center relative'>
-                <img className='w-30 h-30 object-cover' src={p.image} alt="" />
+                <img className='w-30 h-30 object-cover transition duration-500 group-hover:scale-110' src={p.image} alt="logo" />
                 <span className='absolute text-sm top-4 right-7 bg-red-500 rounded-full font-semibold text-white px-3 py-1'>🔥 {p.status}</span>
             </div>
             <div className='p-5 space-y-4 h-full'>

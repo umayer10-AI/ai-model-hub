@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './component/Navbar/Navbar';
 import Banner from './component/Banner/Banner';
 import Both from './component/BothComponent/Both';
+import Mid from './component/Banner/Mid';
 
 const A1 = () => {
     return (
@@ -9,6 +10,7 @@ const A1 = () => {
             <Navbar></Navbar>
             <Banner></Banner>
             <Both></Both>
+            <Mid></Mid>
         </div>
     );
 };

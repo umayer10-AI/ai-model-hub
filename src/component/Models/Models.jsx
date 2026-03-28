@@ -25,7 +25,7 @@ const Models = ({setI}) => {
 
     return (
         <div className='mt-5 max-w-[90%] mx-auto'>
-            <div className='space-y-3 mb-10'>
+            <div className='space-y-3 mb-15'>
                 <h2 className='text-4xl font-bold text-center'>Choose Your AI Model</h2>
                 <h2 className='text-xl font-semibold text-center text-gray-400'>One subscription gives you access to all frontier AI models</h2>
             </div>

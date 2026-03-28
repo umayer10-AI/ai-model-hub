@@ -12,7 +12,7 @@ const Both = () => {
     }
 
     return (
-        <div className=''>
+        <div className='mb-10'>
             <div className='flex justify-center items-center max-w-[90%] mx-auto'>
                 <div className='flex gap-4 my-10'>
                     <button onClick={() => setShow("model")} className={`rounded-full ${show === 'model' ? 'bg-pink-600 text-white btn' : 'text-black btn bg-red-100'} px-15 text-lg font-semibold`}>Models</button>
@@ -25,7 +25,7 @@ const Both = () => {
             }
 
             {
-                show === 'cart' && <Cart info={info} h={h}></Cart>
+                show === 'cart' && <Cart info={info} setI={setI} h={h}></Cart>
             }
 
 
