@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const ModelsCart = ({p}) => {
-    console.log(p)
+const ModelsCart = ({p,setI}) => {
+
+    const [f, setF] = useState(false)
+
+    const a = () => {
+        setI(c => c.includes(p) ? c : [...c,p])
+        setF(true)
+    }
+    
     return (
         <div className='rounded-2xl overflow-hidden shadow-xl h-full'>
             <div className='bg-gray-200 p-7 flex justify-center relative'>
@@ -17,7 +24,7 @@ const ModelsCart = ({p}) => {
                         <span className="text-base font-semibold"> /month</span>
                     </>
                     )}</p>
-                <button className='btn w-full font-semibold bg-red-600 py-7 rounded-2xl text-lg text-white'>Subscribe Now</button>
+                <button onClick={a} className='btn w-full font-semibold bg-red-600 py-7 rounded-2xl text-lg text-white'>{f ? "Subscribed" : "Subscribe Now"}</button>
             </div>
         </div>
     );
