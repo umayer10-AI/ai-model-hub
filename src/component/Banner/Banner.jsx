@@ -5,7 +5,7 @@ import img from "../../assets/banner.png"
 
 const Banner = () => {
     return (
-        <div className='max-w-[80%] mx-auto grid grid-cols-1 lg:grid-cols-2 items-center my-10'>
+        <div className='max-w-[80%] mx-auto grid grid-cols-1 lg:grid-cols-2 items-center mt-10'>
             <div className='space-y-4 lg:space-y-6 order-2 lg:order-1'>
                 <button className='py-2 px-4 font-semibold text-red-500 text-sm bg-red-100 border border-red-500 rounded-full'>✨ Frontier AI Models</button>
                 <h2 className='text-4xl font-bold text-red-600'>One Subscription.</h2>
