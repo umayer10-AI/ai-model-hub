@@ -28,7 +28,7 @@ const Cart = ({info,setI,h}) => {
             }
 
             {
-                info.length === 0 && <h2 className='text-3xl font-semibold text-gray-400 text-center my-10'>Your cart is empty</h2>
+                info.length === 0 && <h2 className='text-3xl font-semibold text-gray-400 text-center py-20 border rounded-2xl bg-blue-100'>Your cart is empty</h2>
             }
 
         </div>
