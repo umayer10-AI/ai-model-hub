@@ -23,7 +23,7 @@ const CartBox = ({p,h}) => {
         <div className='flex flex-col lg:flex-row justify-between items-center gap-3 hover:border-red-500 border border-gray-300 p-4 rounded-2xl bg-gray-100'>
             <div className='flex flex-col lg:flex-row items-center gap-5'>
                 <div className='bg-white p-3 rounded-2xl'>
-                    <img className='w-15 h-15 object-cover' src={p.image} alt="Photo" />
+                    <img className='w-15 h-15 object-contain' src={p.image} alt="Photo" />
                 </div>
                 <div className='space-y-1'>
                     <h2 className='text-2xl font-bold text-center lg:text-left'>{p.title}</h2>

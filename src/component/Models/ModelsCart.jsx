@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { toast,Bounce } from 'react-toastify';
 
-const ModelsCart = ({p,info,setI,g}) => {
+const ModelsCart = ({p,info,g}) => {
 
     const [f, setF] = useState(false)
 
     const a = () => {
-        setI(c => c.includes(p) ? c : [...c,p])
         setF(true)
         g(p)
-        if(info.includes(p)){
+        const findCart = info.find(v => v.id === p.id)
+        if(findCart){
             toast.error('Item already in cart!', {
                 position: "top-right",
                 autoClose: 500,

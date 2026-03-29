@@ -1,11 +1,10 @@
 import React from 'react';
 import CartBox from './CartBox';
 
-const Cart = ({info,setI,h,dollar,setD}) => {
+const Cart = ({info,setI,h,total}) => {
 
     const a = () => {
         setI([])
-        setD(0)
     }
 
     return (
@@ -24,7 +23,7 @@ const Cart = ({info,setI,h,dollar,setD}) => {
                     <div>
                         <div className='flex justify-between items-center p-8 bg-black rounded-3xl my-10'>
                             <h2 className='text-3xl font-bold text-white'>Total</h2>
-                            <h2 className='text-red-400 text-3xl font-bold'>$<span>{dollar}</span></h2>
+                            <h2 className='text-red-400 text-3xl font-bold'>$<span>{total}</span></h2>
                         </div>
                         <div onClick={a} className='bg-red-600 rounded-2xl shadow-lg shadow-red-500/50 btn w-full py-9 hover:bg-red-500'>
                             <h2 className='text-2xl font-bold text-white text-center'>Proceed to Checkout</h2>

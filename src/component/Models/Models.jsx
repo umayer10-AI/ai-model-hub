@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ModelsCart from './ModelsCart';
 import axios from "axios"
 
-const Models = ({info,setI,g}) => {
+const Models = ({info,g}) => {
 
     const [model, setM] = useState([])
     const [loading, setL] = useState(true)
@@ -31,7 +31,7 @@ const Models = ({info,setI,g}) => {
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6'>
                 {
-                    model.map(v => <ModelsCart key={v.id} p={v} info={info} setI={setI} g={g}></ModelsCart>)
+                    model.map(v => <ModelsCart key={v.id} p={v} info={info} g={g}></ModelsCart>)
                 }
             </div>
         </div>

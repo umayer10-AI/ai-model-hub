@@ -6,18 +6,20 @@ const Both = () => {
 
     const [show, setShow] = useState('model')
     const [info, setI] = useState([])
-    const [dollar, setD] = useState(0)
 
     const h = (e) => {
         setI(c => c.filter(v => v.id !== e.id))
-        setD(c => c - Number(e.price))
-        console.log(e.price)
     }
 
+    const total = info.reduce((a,b) => a + b.price, 0)
+
     const g = (e) => {
-        setD(c => c + Number(e.price))
+        const exist = info.find(v => v.id === e.id)
+        if(!exist){
+            setI(c => [...c,e])
+        }
     }
-    console.log(dollar)
+
 
     return (
         <div className='mb-10'>
@@ -29,11 +31,11 @@ const Both = () => {
             </div>
 
             {
-                show === 'model' && <Models info={info} setI={setI} g={g}></Models>
+                show === 'model' && <Models info={info} g={g}></Models>
             }
 
             {
-                show === 'cart' && <Cart info={info} setI={setI} h={h} dollar={dollar} setD={setD}></Cart>
+                show === 'cart' && <Cart info={info} setI={setI} h={h} total={total}></Cart>
             }
 
 
