@@ -8,7 +8,7 @@ const Footer = () => {
                 <div className='space-y-3 col-span-2 md:col-span-3 lg:col-span-2'>
                     <div className='flex justify-center lg:justify-start items-center gap-3'>
                         <img className='w-12 object-cover' src={img} alt="" />
-                        <h2 className='text-2xl font-bold'>Ai Hub</h2>
+                        <h2 className='text-2xl font-bold'>AI Hub</h2>
                     </div>
                     <p className='text-gray-400 text-lg'>One subscription. Access to all frontier AI models in a single powerful platform.</p>
                 </div>

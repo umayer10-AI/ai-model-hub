@@ -7,9 +7,9 @@ const Navbar = () => {
         <div className='max-w-[95%] mx-auto flex flex-col lg:flex-row gap-3 justify-between items-center py-3'>
             <div className='flex items-center gap-1.5'>
                 <img className='w-12 object-cover' src={img} alt="" />
-                <h2 className='text-xl font-bold'>Ai Hub</h2>
+                <h2 className='text-xl font-bold'>AI Hub</h2>
             </div>
-            <div className='flex items-center text-base lg:text-lg font-semibold gap-10'>
+            <div className='flex items-center text-base lg:text-lg font-semibold gap-5'>
                 <h2 className='hover:bg-gray-200 px-3 py-1.5 rounded-sm active:text-white active:bg-black cursor-pointer'>Home</h2>
                 <h2 className='hover:bg-gray-200 px-3 py-1.5 rounded-sm active:text-white active:bg-black cursor-pointer'>About</h2>
                 <h2 className='hover:bg-gray-200 px-3 py-1.5 rounded-sm active:text-white active:bg-black cursor-pointer'>Services</h2>

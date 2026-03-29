@@ -1,10 +1,22 @@
 import React from 'react';
 import CartBox from './CartBox';
+import { toast,Bounce } from 'react-toastify';
 
 const Cart = ({info,setI,h,total}) => {
 
     const a = () => {
         setI([])
+        toast.success('Payment Successful!', {
+            position: "top-right",
+            autoClose: 500,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            transition: Bounce,
+        });
     }
 
     return (
