@@ -26,7 +26,7 @@ const Cart = ({info,setI,h,dollar,setD}) => {
                             <h2 className='text-3xl font-bold text-white'>Total</h2>
                             <h2 className='text-red-400 text-3xl font-bold'>$<span>{dollar}</span></h2>
                         </div>
-                        <div onClick={a} className='bg-red-600 rounded-2xl shadow-lg shadow-red-500/50 btn w-full py-9'>
+                        <div onClick={a} className='bg-red-600 rounded-2xl shadow-lg shadow-red-500/50 btn w-full py-9 hover:bg-red-500'>
                             <h2 className='text-2xl font-bold text-white text-center'>Proceed to Checkout</h2>
                         </div>
                     </div>

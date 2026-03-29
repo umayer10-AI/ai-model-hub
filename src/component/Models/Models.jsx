@@ -29,7 +29,7 @@ const Models = ({info,setI,g}) => {
                 <h2 className='text-4xl font-bold text-center'>Choose Your AI Model</h2>
                 <h2 className='text-xl font-semibold text-center text-gray-400'>One subscription gives you access to all frontier AI models</h2>
             </div>
-            <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6'>
                 {
                     model.map(v => <ModelsCart key={v.id} p={v} info={info} setI={setI} g={g}></ModelsCart>)
                 }
