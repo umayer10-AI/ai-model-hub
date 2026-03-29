@@ -6,10 +6,18 @@ const Both = () => {
 
     const [show, setShow] = useState('model')
     const [info, setI] = useState([])
+    const [dollar, setD] = useState(0)
 
-    const h = (id) => {
-        setI(c => c.filter(v => v.id !== id))
+    const h = (e) => {
+        setI(c => c.filter(v => v.id !== e.id))
+        setD(c => c - Number(e.price))
+        console.log(e.price)
     }
+
+    const g = (e) => {
+        setD(c => c + Number(e.price))
+    }
+    console.log(dollar)
 
     return (
         <div className='mb-10'>
@@ -21,11 +29,11 @@ const Both = () => {
             </div>
 
             {
-                show === 'model' && <Models info={info} setI={setI}></Models>
+                show === 'model' && <Models info={info} setI={setI} g={g}></Models>
             }
 
             {
-                show === 'cart' && <Cart info={info} setI={setI} h={h}></Cart>
+                show === 'cart' && <Cart info={info} setI={setI} h={h} dollar={dollar} setD={setD}></Cart>
             }
 
 

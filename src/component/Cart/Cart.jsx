@@ -1,7 +1,13 @@
 import React from 'react';
 import CartBox from './CartBox';
 
-const Cart = ({info,setI,h}) => {
+const Cart = ({info,setI,h,dollar,setD}) => {
+
+    const a = () => {
+        setI([])
+        setD(0)
+    }
+
     return (
         <div className='max-w-[70%] mx-auto'>
             <div>
@@ -18,9 +24,9 @@ const Cart = ({info,setI,h}) => {
                     <div>
                         <div className='flex justify-between items-center p-8 bg-black rounded-3xl my-10'>
                             <h2 className='text-3xl font-bold text-white'>Total</h2>
-                            <h2 className='text-red-400 text-3xl font-bold'>$30</h2>
+                            <h2 className='text-red-400 text-3xl font-bold'>$<span>{dollar}</span></h2>
                         </div>
-                        <div onClick={() => setI([])} className='bg-red-600 rounded-2xl shadow-lg shadow-red-500/50 btn w-full py-9'>
+                        <div onClick={a} className='bg-red-600 rounded-2xl shadow-lg shadow-red-500/50 btn w-full py-9'>
                             <h2 className='text-2xl font-bold text-white text-center'>Proceed to Checkout</h2>
                         </div>
                     </div>

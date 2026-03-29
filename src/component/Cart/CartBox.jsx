@@ -1,8 +1,24 @@
 import React from 'react';
 import { IoMdCloseCircle } from "react-icons/io";
+import { toast,Bounce } from 'react-toastify';
 
 const CartBox = ({p,h}) => {
-    console.log(p)
+
+    const a = () => {
+        h(p)
+        toast.success('Item removed from the cart', {
+            position: "top-right",
+            autoClose: 500,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            transition: Bounce,
+        });
+    }
+
     return (
         <div className='flex flex-col lg:flex-row justify-between items-center gap-3 hover:border-red-500 border border-gray-300 p-4 rounded-2xl bg-gray-100'>
             <div className='flex flex-col lg:flex-row items-center gap-5'>
@@ -19,7 +35,7 @@ const CartBox = ({p,h}) => {
                     <h2 className='text-3xl font-bold'>$<span>{p.price}</span></h2>
                     <p className='text-sm text-gray-500'>per month</p>
                 </div>
-                <h2 onClick={() => h(p.id)} className='text-red-500 text-4xl lg:text-2xl'><IoMdCloseCircle /></h2>
+                <h2 onClick={a} className='text-red-500 text-4xl lg:text-2xl'><IoMdCloseCircle /></h2>
             </div>
         </div>
     );

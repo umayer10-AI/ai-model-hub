@@ -1,12 +1,40 @@
 import React, { useState } from 'react';
+import { toast,Bounce } from 'react-toastify';
 
-const ModelsCart = ({p,setI}) => {
+const ModelsCart = ({p,info,setI,g}) => {
 
     const [f, setF] = useState(false)
 
     const a = () => {
         setI(c => c.includes(p) ? c : [...c,p])
         setF(true)
+        g(p)
+        if(info.includes(p)){
+            toast.error('Item already in cart!', {
+                position: "top-right",
+                autoClose: 500,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+                transition: Bounce,
+            });
+        }
+        else{
+            toast.success('Item added to cart!', {
+                position: "top-right",
+                autoClose: 500,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+                transition: Bounce,
+            });
+        }
     }
     
     return (
